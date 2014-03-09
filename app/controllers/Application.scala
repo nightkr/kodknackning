@@ -9,4 +9,12 @@ object Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+	def about = Action {
+		Ok(views.html.content.about())
+	}
+
+	def conventions = Action {
+		Ok(views.html.content.conventions())
+	}
+
 }
