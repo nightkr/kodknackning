@@ -19,7 +19,7 @@
 
     <p>
         Ett vanligt första kommando som används i olika programmeringsguider brukar kallas för
-        "Hello World", då det skriver ut den textsträngen i terminalen. Scalas variant stå härunder,
+        "Hello World", då det skriver ut den textsträngen i terminalen. Scalas variant står härunder,
         pröva den nu!
     </p>
 
@@ -43,6 +43,31 @@
     <p>
         Här kanske du också märkte att vi inte hade några citationstecken. Detta är för att siffror,
         till skillnad från vanlig text, måste tolkas närmre för att kunna användas för något som faktiskt
-        använder egenskapen att de inte bara är text.
+        drar nytta ifrån egenskapen att de inte bara är text.
+    </p>
+
+    <h3>Variabler</h3>
+
+    <p>
+        Vi kan även spara ett värde (såsom ett matematiskt uttryck, en textsträng,
+        eller resultatet från ett kommandoanrop) i en variabel. Detta gör att vi senare
+        kan använda det i ett annat kommandoanrop.
+    </p>
+
+    @helpers.sample(
+        """val värdet = 5
+          |println(värdet)""".stripMargin)
+
+    <p>
+        Det nya här är dels <code>val</code>, som betyder att vi skapar en ny variabel, och dels
+        <code>=</code> som betyder att vi sätter värdet på variabeln till uttrycket till höger.
+    </p>
+
+    <p>
+        Något annat som är nytt är det första uttrycket, i stället för att skriva ut något själva,
+        så ger Scala oss en rapport om variabeln vi har definerat. <code>värdet: Int</code> betyder
+        att vi har definerat en variabel som heter <code>värdet</code>, och har typen <code>Int</code>
+        (ett heltal). En annan typ vi redan har använt även om vi inte märkte det var <code>String</code>,
+        som är ett strängtextvärde.
     </p>
 }
