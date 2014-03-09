@@ -1,0 +1,8 @@
+language: scala
+scala:
+- 2.10.3
+deploy:
+  provider: heroku
+  strategy: anvil
+  api_key:
+    secure: PrBpRKXp3t7wS6oCSdKQCTdGxHt7zrgBaxEf4Z0r7I/OW9VP/csQIDZmv/zXbQph+44OymsSdW6QIl4Z6sa+DHlwOR+HsiAzuwnWos6isqi89p4yly8/xbut9YEijVxNviJUHh1M3MERtFi6Au/6lIwEpB3Gk70DUPytElGoEmk=
