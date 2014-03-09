@@ -17,4 +17,8 @@ object Application extends Controller {
 		Ok(views.html.content.conventions())
 	}
 
+  def repl = Action {
+    Ok(views.html.content.repl())
+  }
+
 }

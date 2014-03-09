@@ -1,0 +1,48 @@
+@contentBase("Hej, världen!") {
+    <h3>Mitt första kommandoanrop</h3>
+
+    <p>
+        Nu när du har installerat Scala så kan du öppna Scalas "REPL" (Read-Eval-Print-Loop, vi återkommer till detta senare).
+        Där kan du prova olika Scala-kommandon som sedan körs.
+    </p>
+
+    <p>
+        På Windows så kan det göras genom att trycka <kbd>Win+R</kbd>,
+        skriva <code>cmd</code> och trycka <kbd>Enter</kbd>, och slutligen
+        skriva <code>scala</code> och trycka på <kbd>Enter</kbd>.
+        <!-- TODO: Insert images here -->
+    </p>
+
+    <p>
+        Du kan köra ett kommando genom att skriva in det, och sedan trycka på <kbd>Enter</kbd>.
+    </p>
+
+    <p>
+        Ett vanligt första kommando som används i olika programmeringsguider brukar kallas för
+        "Hello World", då det skriver ut den textsträngen i terminalen. Scalas variant stå härunder,
+        pröva den nu!
+    </p>
+
+    @helpers.sample("""println("Hej, Världen!")""")
+
+    <p>
+        Detta betyder att vi anropar <code>println</code> med indatat (brukar kallas för argumentet)
+        "Hej, Världen!". Citationstecknen angränsar rå text som inte ska tolkas speciellt (textsträngar)
+        och paranteserna angränsar kommandot från argumenten. <code>println</code> skriver ut sitt argument
+        i kommandotolken och returnerar sedan ingenting, men andra kommandon kan göra vad som helst.
+    </p>
+
+    <h3>Matte</h3>
+
+    <p>
+        Vi kan även beräkna matematiska uttryck. Skriv helt enkelt in dem som vanligt.
+    </p>
+
+    @helpers.sample("println(3 * 5)")
+
+    <p>
+        Här kanske du också märkte att vi inte hade några citationstecken. Detta är för att siffror,
+        till skillnad från vanlig text, måste tolkas närmre för att kunna användas för något som faktiskt
+        använder egenskapen att de inte bara är text.
+    </p>
+}
