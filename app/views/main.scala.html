@@ -18,16 +18,24 @@
         </header>
         <div class="body">
             <div id="sidebar">
-                <nav class="menu">
-                @menu {
-                    @menu.list("Introduktion", routes.Application.introduction()) {
-                        @menu.item("Konventioner", routes.Application.conventions())
+                <div class="widget">
+                    <h2>
+                        Innehåll
+                    </h2>
+                    <nav class="menu">
+                    @menu {
+                        @menu.list("Introduktion", routes.Application.introduction()) {
+                            @menu.item("Konventioner", routes.Application.conventions())
+                        }
+                        @menu.list("Kom igång", routes.Application.gettingstarted()) {
+                            @menu.item("REPL", routes.Application.repl())
+                        }
                     }
-                    @menu.list("Kom igång", routes.Application.gettingstarted()) {
-                        @menu.item("REPL", routes.Application.repl())
-                    }
-                }
-                </nav>
+                    </nav>
+                </div>
+                <a href="http://webbstjarnan.se" target="_blank">
+                    <img src="http://www.webbstjarnan.se/wordpress/wp-content/uploads/se_webbstjarnan_ny_250px.png" alt="Detta är ett bidrag i Webbstjärnan" width="200px" />
+                </a>
             </div>
             <article>
             @content
