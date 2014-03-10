@@ -1,0 +1,90 @@
+#sidebar {
+  .menu {
+    ol {
+      .current {
+        > .label {
+          &, &:visited {
+            color: lighten(black, 30%);
+          }
+        }
+      }
+
+      :not(current) {
+        > .label {
+          &, &:visited {
+            color: black;
+          }
+          &:hover {
+            color: steelblue;
+          }
+        }
+      }
+
+      .active {
+        background-color: rgba(0, 0, 0, 0.05)
+      }
+
+      &.root {
+        padding-left: 0;
+      }
+
+      &.root {
+        margin-left: 0;
+      }
+
+      list-style: none;
+      /*padding-left: 10px;*/
+      padding: 0;
+
+      margin: 0;
+      margin-left: 16px;
+    }
+  }
+
+  /*width: 224px;*/
+  padding: 12px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+article {
+  max-width: 800px;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+h1 {
+  a {
+    &, &:visited {
+      color: black;
+    }
+
+    &:hover {
+      color: lighten(black, 30%);
+    }
+
+    text-decoration: none;
+  }
+
+  margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+.body {
+  display: flex;
+
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .body {
+    flex-direction: row;
+  }
+
+  #sidebar {
+    width: 224px;
+  }
+}

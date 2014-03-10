@@ -1,7 +1,7 @@
-@main("Welcome to Play") {
+@()(implicit req: RequestHeader)
 
-    @helpers.sample(
-        """val x = "hi"
-        """.stripMargin.trim)
-
+@main("") {
+    <p>
+        Kodknackning är en programmeringsguide för nybörjare.
+    </p>
 }

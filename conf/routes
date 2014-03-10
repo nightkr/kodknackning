@@ -3,11 +3,14 @@
 # ~~~~
 
 # Home page
-GET        /                                  controllers.Application.index
-GET        /about                             controllers.Application.about
+GET        /                                controllers.Application.index
+GET        /about                           controllers.Application.about
 
-GET        /gettingstarted/conventions        controllers.Application.conventions
-GET        /gettingstarted/repl               controllers.Application.repl
+GET        /introduction                    controllers.Application.introduction
+GET        /introduction/conventions        controllers.Application.conventions
+
+GET        /gettingstarted                  controllers.Application.gettingstarted
+GET        /gettingstarted/repl             controllers.Application.repl
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file                      controllers.Assets.at(path="/public", file)
+GET        /assets/*file                    controllers.Assets.at(path="/public", file)

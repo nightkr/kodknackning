@@ -1,7 +1,7 @@
-@(title: String)(body: Html)
+@(title: String)(body: Html)(implicit req: RequestHeader)
 
-@main(title) {
-    <h2>@title</h2>
+    @main(title) {
+        <h2>@title</h2>
 
-    @body
-}
+        @body
+    }

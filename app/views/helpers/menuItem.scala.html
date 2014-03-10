@@ -1,0 +1,6 @@
+@(name: String, call: Call, active: Boolean, current: Boolean, suffix: => Option[Html])
+
+<li class="@if(active) {active} @if(current) {current} @if(suffix.isDefined) {has-submenu}">
+    <a class="label" href="@call">@name</a>
+    @suffix
+</li>

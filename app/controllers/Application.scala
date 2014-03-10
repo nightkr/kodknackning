@@ -1,24 +1,37 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index())
+    implicit req =>
+      Ok(views.html.index())
   }
 
-	def about = Action {
-		Ok(views.html.content.about())
-	}
+  def about = Action {
+    implicit req =>
+      Ok(views.html.content.about())
+  }
 
-	def conventions = Action {
-		Ok(views.html.content.conventions())
-	}
+  def introduction = Action {
+    implicit req =>
+      Ok(views.html.content.introduction())
+  }
+
+  def conventions = Action {
+    implicit req =>
+      Ok(views.html.content.conventions())
+  }
+
+  def gettingstarted = Action {
+    implicit req =>
+      Ok(views.html.content.gettingstarted())
+  }
 
   def repl = Action {
-    Ok(views.html.content.repl())
+    implicit req =>
+      Ok(views.html.content.repl())
   }
 
 }

@@ -1,14 +1,37 @@
-@(title: String)(content: Html)
+@(title: String)(content: Html)(implicit req: RequestHeader)
+
+@import helpers.menu
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>@if(title){@title - }Kodknackning</title>
+        <title>@if(title) {@title - }Kodknackning</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
     </head>
     <body>
-        @content
+        <header>
+            <h1>
+                <a href="@routes.Application.index()">Kodknackning</a>
+            </h1>
+        </header>
+        <div class="body">
+            <div id="sidebar">
+                <nav class="menu">
+                @menu {
+                    @menu.list("Introduktion", routes.Application.introduction()) {
+                        @menu.item("Konventioner", routes.Application.conventions())
+                    }
+                    @menu.list("Kom igång", routes.Application.gettingstarted()) {
+                        @menu.item("REPL", routes.Application.repl())
+                    }
+                }
+                </nav>
+            </div>
+            <article>
+            @content
+            </article>
+        </div>
     </body>
 </html>
