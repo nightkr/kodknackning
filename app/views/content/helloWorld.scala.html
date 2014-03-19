@@ -61,15 +61,24 @@
           |println(värdet)""".stripMargin)
 
     <p>
-        Det nya här är dels <code>val</code>, som betyder att vi skapar en ny variabel, och dels
+        Det nya här är <code>val</code>, som betyder att vi skapar en ny variabel, och dels
         <code>=</code> som betyder att vi sätter värdet på variabeln till uttrycket till höger.
     </p>
 
+    <h3>Automatiska variabler</h3>
+
     <p>
-        Något annat som är nytt är det första uttrycket, i stället för att skriva ut något själva,
-        så ger Scala oss en rapport om variabeln vi har definerat. <code>värdet: Int</code> betyder
-        att vi har definerat en variabel som heter <code>värdet</code>, och har typen <code>Int</code>
-        (ett heltal). En annan typ vi redan har använt även om vi inte märkte det var <code>String</code>,
-        som är ett strängtextvärde.
+        I REPL-en så blir fristående värden automatiskt variabler med genererade namn som börjar på <code>res</code>.
     </p>
+
+    @helpers.sample(
+        """"ett"
+          |"två"
+          |"tre"
+         """.stripMargin
+    )
+
+    <div class="warning">
+        <p>Detta fungerar <strong>endast</strong> i REPL-en, inte i riktiga Scala-program.</p>
+    </div>
 }

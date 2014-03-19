@@ -1,0 +1,39 @@
+@()(implicit req: RequestHeader)
+
+@contentBase("Typer") {
+    <h3>Det andra nya</h3>
+    <p>
+        Något annat som är nytt från det förra exemplet är det första uttrycket, i stället för att skriva ut något själva,
+        så ger Scala oss en rapport om variabeln vi har definerat. <code>värdet: Int</code> betyder
+        att vi har definerat en variabel som heter <code>värdet</code>, och har typen <code>Int</code>
+        (ett heltal). En annan typ vi redan har använt även om vi inte märkte det var <code>String</code>,
+        som är ett strängtextvärde. När vi deklarer en variabel kan vi antingen definera typen själv eller låta kompilatorn gissa.
+    </p>
+
+    @helpers.sample(
+        """val m: String = "denna variabel fick sin typ manuellt"
+          |val a = "denna variabel fick sin typ automatiskt"
+         """.stripMargin)
+
+    <p>
+        Alla värden har typer, inte bara variabler.
+    </p>
+
+    <h3>Typsäkerhet</h3>
+    <p>
+        En av Scalas största fördelar är att det automatiskt kontrollerar att typerna stämmer när programmer kompileras.
+        Detta gör att många problemklasser elimineras. Till exempel så borde det inte gå att subtrahera från en sträng,
+        utan bara ett numeriskt värde!
+    </p>
+
+    @helpers.sample(
+        """3 - 2
+          |3 - "hej"
+          |3 - "2"
+         """.stripMargin
+    )
+
+    <p>
+        Som du ser så nekade Scala båda strängarna (till och med när den innehöll en siffra!) medan den lät integern igenom.
+    </p>
+}

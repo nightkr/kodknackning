@@ -34,4 +34,8 @@ object Application extends Controller {
       Ok(views.html.content.helloWorld())
   }
 
+  def types = Action {
+    implicit req =>
+      Ok(views.html.content.types())
+  }
 }
