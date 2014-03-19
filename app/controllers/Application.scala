@@ -29,9 +29,9 @@ object Application extends Controller {
       Ok(views.html.content.gettingstarted())
   }
 
-  def repl = Action {
+  def helloWorld = Action {
     implicit req =>
-      Ok(views.html.content.repl())
+      Ok(views.html.content.helloWorld())
   }
 
 }

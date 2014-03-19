@@ -16,6 +16,11 @@
             <h1>
                 <a href="@routes.Application.index()">Kodknackning</a>
             </h1>
+            <div class="menu inline-menu">
+            @menu {
+                @menu.item("Om", routes.Application.about())
+            }
+            </div>
         </header>
         <div class="body">
             <div id="sidebar">
@@ -29,7 +34,7 @@
                             @menu.item("Konventioner", routes.Application.conventions())
                         }
                         @menu.list("Kom igång", routes.Application.gettingstarted()) {
-                            @menu.item("REPL", routes.Application.repl())
+                            @menu.item("Hej, Världen!", routes.Application.helloWorld())
                         }
                     }
                     </nav>
