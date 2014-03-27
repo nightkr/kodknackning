@@ -1,7 +1,16 @@
 @(in: Seq[replsampler.Runner.Result])
 
-@import replsampler.formatting.TextTableFormatter
+@import replsampler.Runner.Result
 
-<pre>
-@TextTableFormatter(in)
-</pre>
+<table class="codesample">
+@for(Result(cmd, output, status) <- in) {
+    <tr class="@sample.status2cssclass(status)">
+        <td class="code">
+            <pre>@cmd</pre>
+        </td>
+        <td class="result">
+            <pre>@output</pre>
+        </td>
+    </tr>
+}
+</table>

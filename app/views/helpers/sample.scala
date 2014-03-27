@@ -3,7 +3,7 @@ package views.html.helpers
 import replsampler.formatting.Formatter
 import play.api.templates.Html
 import replsampler.Runner.Result
-import replsampler.ReplSampler
+import replsampler.{Runner, ReplSampler}
 
 object sample {
   object KodknackningFormatter extends Formatter[Html]{
@@ -11,4 +11,10 @@ object sample {
   }
 
   def apply(in: String): Html = ReplSampler.runAndFormat(in, KodknackningFormatter)
+
+  def status2cssclass(r: Runner.ResultStatus) = r match {
+    case Runner.CompileFail => "error"
+    case Runner.RuntimeFail => "error"
+    case Runner.Success => "success"
+  }
 }

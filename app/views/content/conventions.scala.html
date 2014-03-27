@@ -5,15 +5,11 @@
 
     <p>Korta kodsegment kommer att markeras <code>med ett monospace-typsnitt så här</code>.</p>
 
-    <div class="codesnippet">
-        <pre class="code">
-            Längre kodexempel kommer att visas I sektioner som ser ut så här.
-        </pre>
-
-        <pre class="result">
-            Med resultaten vid sidan om.
-        </pre>
-    </div>
+    @helpers.sampleFormatter(Seq(replsampler.Runner.Result(
+        "Längre kodexempel kommer att visas I sektioner som ser ut så här.",
+        "Med resultaten vid sidan om.",
+        replsampler.Runner.Success
+    )))
 
     <div class="warning">
         <p>Dessutom kommer varningar för vanliga misstag att visas så här.</p>

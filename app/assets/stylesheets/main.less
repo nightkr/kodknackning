@@ -136,5 +136,29 @@ pre {
     margin: 0;
   }
 
+  margin-top: 1em;
   padding: 6px;
+}
+
+table.codesample {
+  pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  td {
+    padding: 0;
+  }
+
+  tr:not(:first-child) td {
+    border-top: 1px gray solid;
+  }
+
+  tr td:not(:first-child) pre:before {
+    margin-left: 1em;
+    margin-right: 1em;
+    content: '=>'; //TODO add graphic here
+    color: gray;
+  }
 }
