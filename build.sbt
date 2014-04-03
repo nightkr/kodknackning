@@ -7,7 +7,8 @@ scalaVersion := "2.10.3"
 libraryDependencies ++= Seq(
   jdbc,
   anorm,
-  cache
+  cache,
+  "commons-codec" % "commons-codec" % "1.9"
 )
 
 play.Project.playScalaSettings
