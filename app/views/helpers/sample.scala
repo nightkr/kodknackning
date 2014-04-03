@@ -6,6 +6,7 @@ import replsampler.Runner.Result
 import replsampler.{Runner, ReplSampler}
 import utils.Hash
 import play.api.cache.Cache
+import play.api.Play.current
 
 object sample {
   object KodknackningFormatter extends Formatter[Html]{

@@ -20,10 +20,10 @@ object Hash {
     override def get: MessageDigest = MessageDigest.getInstance("SHA-1")
   }
 
-  class Digest(private val bytes: Array[Byte]) extends AnyVal {
-    def toBytes: Seq[Byte] = bytes.toList
+  class Digest(val rawBytes: Array[Byte]) extends AnyVal {
+    def toBytes: Seq[Byte] = rawBytes.toList
 
-    def toHexString: String = Hex.encodeHexString(bytes)
+    def toHexString: String = Hex.encodeHexString(rawBytes)
   }
 
 }
